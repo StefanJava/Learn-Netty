@@ -32,8 +32,8 @@ public class TestByteBuffer {
                     byte b = buffer.get();
                     log.info("读取字符: {}", (char) b);
                 }
-//                buffer.clear();
-                buffer.compact();
+//                buffer.clear();  position -> 0  limit -> cap
+                buffer.compact();  // position -> remaining number  limit -> cap
             }
         } catch (IOException e) {
             e.printStackTrace();
