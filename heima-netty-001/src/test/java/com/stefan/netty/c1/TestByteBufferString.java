@@ -1,9 +1,12 @@
 package com.stefan.netty.c1;
 
+import io.netty.util.internal.StringUtil;
+
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 import static com.stefan.netty.c1.ByteBufferUtil.debugAll;
 
@@ -35,5 +38,8 @@ public class TestByteBufferString {
 
         String str2 = StandardCharsets.UTF_8.decode(buffer2).toString();
         System.out.println(str2);
+
+        byte[] bytes = buffer3.array();
+        System.out.println(new String(bytes));
     }
 }
