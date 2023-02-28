@@ -39,12 +39,8 @@ public class WriteServer {
                         sc.configureBlocking(false);
 
                         // 向客户端发送数据
-                        StringBuilder sb = new StringBuilder();
-                        for (int i = 0; i < 30000000; i++) {
-                            sb.append("a");
-                        }
 
-                        ByteBuffer buffer = StandardCharsets.UTF_8.encode(sb.toString());
+                        ByteBuffer buffer = StandardCharsets.UTF_8.encode("a".repeat(30000000));
                         while (buffer.hasRemaining()) {
                             int write = sc.write(buffer);
                             System.out.println(write);
