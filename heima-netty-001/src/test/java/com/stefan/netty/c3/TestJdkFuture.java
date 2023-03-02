@@ -18,17 +18,14 @@ public class TestJdkFuture {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         // 提交一个任务
-        Future<Integer> future = executorService.submit(new Callable<Integer>() {
-            @Override
-            public Integer call() {
-                try {
-                    log.debug("执行任务。。。");
-                    TimeUnit.MILLISECONDS.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                return 500;
+        Future<Integer> future = executorService.submit(() -> {
+            try {
+                log.debug("执行任务。。。");
+                TimeUnit.MILLISECONDS.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+            return 500;
         });
 
         log.debug("等待结果");
