@@ -1,4 +1,4 @@
-package com.stefan.advance;
+package com.stefan.advance.c1;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
