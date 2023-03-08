@@ -15,7 +15,7 @@ import static com.stefan.nio.c1.ByteBufferUtil.debugAll;
  */
 public class TestScatteringReads {
     public static void main(String[] args) {
-        try (FileChannel channel = new RandomAccessFile("heima-netty-001/words.txt", "rw").getChannel()){
+        try (FileChannel channel = new RandomAccessFile("heima-netty-001/words.txt", "rw").getChannel()) {
             ByteBuffer buffer1 = ByteBuffer.allocate(3);
             ByteBuffer buffer2 = ByteBuffer.allocate(3);
             ByteBuffer buffer3 = ByteBuffer.allocate(5);

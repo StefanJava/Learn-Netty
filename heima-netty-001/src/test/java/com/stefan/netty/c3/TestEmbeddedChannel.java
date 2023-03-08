@@ -1,8 +1,6 @@
 package com.stefan.netty.c3;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
-import io.netty.buffer.ByteBufUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelOutboundHandlerAdapter;
@@ -10,7 +8,6 @@ import io.netty.channel.ChannelPromise;
 import io.netty.channel.embedded.EmbeddedChannel;
 import lombok.extern.slf4j.Slf4j;
 
-import java.nio.CharBuffer;
 import java.nio.charset.StandardCharsets;
 
 /**

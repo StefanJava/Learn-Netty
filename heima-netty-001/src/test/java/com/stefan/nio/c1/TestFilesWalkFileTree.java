@@ -15,7 +15,6 @@ public class TestFilesWalkFileTree {
     public static void main(String[] args) throws IOException {
 
 
-
     }
 
     private static void m3() throws IOException {

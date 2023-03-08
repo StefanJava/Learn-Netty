@@ -18,6 +18,7 @@ public class HelloWorldServer {
     public static void main(String[] args) {
         start();
     }
+
     private static void start() {
         NioEventLoopGroup boss = new NioEventLoopGroup();
         NioEventLoopGroup worker = new NioEventLoopGroup();
