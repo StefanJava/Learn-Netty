@@ -31,8 +31,8 @@ public class TestMessageCodec {
         ByteBuf buf = ByteBufAllocator.DEFAULT.buffer();
         new MessageCodec().encode(null,loginRequestMessage, buf);
 
-        ByteBuf buf1 = buf.slice(0, 100);
-        ByteBuf buf2 = buf.slice(100, buf.readableBytes() - 100);
+        ByteBuf buf1 = buf.slice(0, 50);
+        ByteBuf buf2 = buf.slice(50, buf.readableBytes() - 50);
         buf1.retain();
         buf2.retain();
         channel.writeInbound(buf1);
