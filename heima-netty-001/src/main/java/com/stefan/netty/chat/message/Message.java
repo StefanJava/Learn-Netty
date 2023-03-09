@@ -6,6 +6,9 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author stefanyang
+ */
 @Data
 public abstract class Message implements Serializable {
 

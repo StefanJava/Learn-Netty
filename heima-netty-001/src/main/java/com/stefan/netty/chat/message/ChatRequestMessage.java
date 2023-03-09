@@ -3,6 +3,9 @@ package com.stefan.netty.chat.message;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * @author stefanyang
+ */
 @Data
 @ToString(callSuper = true)
 public class ChatRequestMessage extends Message {

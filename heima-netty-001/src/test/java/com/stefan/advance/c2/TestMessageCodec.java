@@ -26,7 +26,7 @@ public class TestMessageCodec {
                 messageCodec
         );
 
-        LoginRequestMessage loginRequestMessage = new LoginRequestMessage("Stefan", "123456", "stefan");
+        LoginRequestMessage loginRequestMessage = new LoginRequestMessage("Stefan", "123456");
 
         ByteBuf buf = ByteBufAllocator.DEFAULT.buffer();
         new MessageCodec().encode(null,loginRequestMessage, buf);
